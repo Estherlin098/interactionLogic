@@ -46,8 +46,9 @@ gift1 = input("Enter your most wanted gift: ")
 # (a whole paragraph!) and we want to continue more code on the next line. 
 # play close attention to the syntax!
 
+foodCap = food1.capitalize()
 
-story = food1.capitalize() + " party at my house tonight! " + name1 + " is invited, and you can bring your pets " + pet + " " + petname1 + "!" \
+story = foodCap + " party at my house tonight! " + name1 + " is invited, and you can bring your pets " + pet + " " + petname1 + "!" \
 " Your job is to mix " + food2 + " with sticky toufu together, and serve it to " + name2 + "." \
 " It's dessert time! You decided to make a " + color1 + " cake with " + snack1 + " and " + fruit1 + "." \
 " It's midnight and time to go home. Your friend " + name2 + " gave you a/an " + gift1 + "." \
