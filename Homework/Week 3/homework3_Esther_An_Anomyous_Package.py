@@ -51,14 +51,20 @@ You made it! This is the final game result!
         # game over: don't have enough money to buy 3 keys
         else:
             print ("It seems like you don’t have enough money to buy remaining keys, ($20 per key). Please play again to help save Tintin’s father. ")
-    
+            print ("""
+  ___   __   _  _ ____     __  _  _ ____ ____ 
+ / __) / _\ ( \/ |  __)   /  \/ )( (  __|  _ /
+( (_ \/    \/ \/ \) _)   (  O ) \/ /) _) )   /
+ \___/\_/\_/\_)(_(____)   \__/ \__/(____|__\_)
+
+        """)
     # game over: don't have enough money to buy 3 keys
     else:
         print ("You now have $" + str(player["money"]) + ", and found " + str(player["keys"]) + " keys.")
         print ("It seems like you don’t have enough money to buy remaining keys, ($20 per key). Please play again to help save Tintin’s father. ")
         print ("""
   ___   __   _  _ ____     __  _  _ ____ ____ 
- / __) / _\ ( \/ |  __)   /  \/ )( (  __|  _ \
+ / __) / _\ ( \/ |  __)   /  \/ )( (  __|  _ /
 ( (_ \/    \/ \/ \) _)   (  O ) \/ /) _) )   /
  \___/\_/\_/\_)(_(____)   \__/ \__/(____|__\_)
 
