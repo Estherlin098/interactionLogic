@@ -1,7 +1,6 @@
 // this is Esther Lin Homework 4
 // October 3, 2021
 
-
 function preload() {
   // Pre-load font and image
   font = loadFont('AmericanTypeEF-Medium.otf');
@@ -26,10 +25,6 @@ function draw() {
     fill(random(0, 211)), random(221), random(0, 221);
     Poster();
   } 
-
-  // if(mousePressed) {
-
-  // }
 }
 
 function Poster() {
