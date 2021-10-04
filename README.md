@@ -1,3 +1,0 @@
-# interactionLogic
-
-# Homework Brief
