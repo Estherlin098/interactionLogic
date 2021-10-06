@@ -1,37 +1,50 @@
 // this is Esther Lin Homework 4
-// October 3, 2021
+// october 3, 2021
 
 function preload() {
-  // Pre-load font and image
+  // pre-load font and image
   font = loadFont('AmericanTypeEF-Medium.otf');
   heart = loadImage('Heart.png')
 }
 
 function setup() {
-  // Create canvas and specify canvas size
-  createCanvas(1950, 1300);
+  // create canvas and specify canvas size
+  createCanvas(windowWidth, windowHeight);
 
-  // Set text characteristics
+  // set text characteristics
   textFont(font);
   
-  //smallerText = textSize(70)
+  // smallerText = textSize(70)
   textAlign(CENTER, CENTER);
   textArray1 = ['I', 'N', 'Y']
   textArray2 = ['MORE', 'THAN', 'EVER']
+
+  // create a button called Reset, when the mouse is pressed, call the resetSketch function
+  let button = createButton("Reset");
+  button.mousePressed(resetSketch);
+}
+
+// clear the canvas when the reset button is pressed
+function resetSketch() {
+  background(255);
+  poster();
 }
 
 function draw() {
+  // when mouse is pressed, randomize one grey color, 
+  // change the cursor to CROSS, and call poster function
   if (mouseIsPressed) {
-    fill(random(0, 211)), random(221), random(0, 221);
-    Poster();
-  } 
+    fill(random(0, 255));
+    cursor(CROSS)
+    poster();
+  }
 }
 
-function Poster() {
+function poster() {
   // set the text Size to 120
   textSize(120);
   
-  // Set the gap between letters and the left and top margin
+  // set the gap between letters and the left and top margin
   let gap = 65;
   let margin = 20;
   translate(margin * 1, margin * 1);
@@ -54,7 +67,6 @@ function Poster() {
 
   // draw MORE THAN EVER
   let counter = 0;
-  // set the text Size to 60
   textSize(60);
 
   for (let y = 210; y < height - gap; y += gap) {
