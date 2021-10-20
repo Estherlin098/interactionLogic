@@ -24,7 +24,7 @@ let playerCurrentMove = '';
 let computerMoves = '';
 let timer = 3;
 let gameRound = 0;
-var input='';
+var input = '';
 
 function setup() {
   createCanvas(windowWidth, windowHeight); 
