@@ -24,14 +24,11 @@ let playerCurrentMove = '';
 let computerMoves = '';
 let timer = 3;
 let gameRound = 0;
-let isKeyPress = false;
 var input='';
 
 function setup() {
   createCanvas(windowWidth, windowHeight); 
   textAlign(CENTER, CENTER);
-  let button = createButton("Replay");
-  button.mousePressed(draw);
   noStroke();
 }
 
@@ -40,12 +37,13 @@ function draw() {
   textSize(30)
   text("Press an arrow key that you think will be different from the computer.", width/2, height/2 - 50 );
   text("Game starts in: " + timer, width/2, height/2);
-  
+
   //show timer
   input = keyPressed()
   if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
   }
+  //when the timer reaches 0, start the game
   if (timer == 0) {
     background(200);
     if (input != "") {
@@ -57,9 +55,10 @@ function draw() {
 }
 
 function checkGameStatus() {
+  //check game status at the end of the game
   if (gameRound == 1) {
     if (playerScore > computerScore) {
-      textSize(100);
+      textSize(40);
       text("You win!", 50, height/2 + 40);
       input='';
     } else if (playerScore == computerScore) {
@@ -71,7 +70,6 @@ function checkGameStatus() {
     noLoop();
   }
 }
-
 
 function keyPressed() {
   if (keyCode === UP_ARROW) {
