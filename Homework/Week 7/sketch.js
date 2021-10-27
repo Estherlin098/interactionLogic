@@ -38,7 +38,7 @@ function setup() {
 function draw() {
     image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
-    console.log(positions);
+    //console.log(positions);
 
     noFill();
     stroke(255);
@@ -46,6 +46,8 @@ function draw() {
     beginShape();
     for (var i = 0; i < positions.length; i++) {
       // vertex: used to specify the coordinates of the vertices used to draw a shape
+        //fill(map(i, 0, positions.length, 0, 360), 50, 100);
+
         //vertex(positions[i][0], positions[i][1]); 
     }
   //draw line for between dots
@@ -55,12 +57,13 @@ function draw() {
     textSize(10);
     for (var i = 0; i < positions.length; i++) {
         fill(map(i, 0, positions.length, 0, 360), 50, 100);
+        //ellipse(positions[i][0], positions[i][1], 4, 4);
+        //text(i, positions[i][0], positions[i][1]);
     }
     filter(GRAY);
     if (positions.length > 0) {
         image(img, positions[0][0]-60, positions[0][1]-300, 320, 240);
         image(pumpkin, positions[1][0], positions[1][1], 55, 55);
         image(pumpkin, positions[13][0]-40, positions[13][1], 55, 55);
-
     }
 }
