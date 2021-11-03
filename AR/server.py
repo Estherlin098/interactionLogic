@@ -5,7 +5,7 @@ import ssl
  
 ## Variables you can modify
  
-bind_to_address = '192.168.250.26'
+bind_to_address = '192.168.1.129'
 server_port = 5500
 ssl_key_file = "server1.example.com.key"
 ssl_certificate_file = "server1.example.com.pem"
